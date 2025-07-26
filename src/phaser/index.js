@@ -20,25 +20,35 @@ class TestScene extends Phaser.Scene {
 
     create() {
         // Create a simple test display
-        this.add.text(400, 200, 'LnH Battle', {
+        const titleText = this.add.text(400, 200, 'LnH Battle', {
             fontSize: '48px',
             fill: '#ffffff',
             fontWeight: 'bold'
         }).setOrigin(0.5);
 
-        this.add.text(400, 280, 'Turn-based Battle Arena', {
+        const newGameText = this.add.text(400, 250, 'New Game', {
+            fontSize: '32px',
+            fill: '#ffffff'
+        }).setOrigin(0.5).setInteractive({ useHandCursor: true });
+
+        const subtitleText = this.add.text(400, 300, 'Turn-based Battle Arena', {
             fontSize: '24px',
             fill: '#cccccc'
         }).setOrigin(0.5);
 
-        this.add.text(400, 350, 'Click to continue', {
+        const infoText = this.add.text(400, 360, 'Click to continue', {
             fontSize: '18px',
             fill: '#888888'
         }).setOrigin(0.5);
 
-        // Add click handler
-        this.input.on('pointerdown', () => {
-            console.log('Game is working! Ready to implement battle system.');
+        // Add click handler for the menu item
+        newGameText.on('pointerdown', () => {
+            // Clear screen by setting background color and hiding text
+            this.cameras.main.setBackgroundColor('#2e2e2e');
+            titleText.setVisible(false);
+            newGameText.setVisible(false);
+            subtitleText.setVisible(false);
+            infoText.setVisible(false);
         });
 
         // Add a simple animated element
