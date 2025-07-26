@@ -1,60 +1,23 @@
 {
-    "name": "lnh-battle",
-    "version": "0.0.1",
-    "description": "Turn-based battle arena game built with Phaser 3",
-    "type": "module",
-    "main": "src/phaser/index.js",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview",
-        "test:core": "jest --config tests/ci/jest.config.js",
-        "test:ui": "playwright test --config tests/ci/playwright.config.js",
-        "test": "npm run test:core && npm run test:ui",
-        "test:coverage": "jest --coverage --config tests/ci/jest.config.js",
-        "test:watch": "jest --watch --config tests/ci/jest.config.js",
-        "predeploy": "npm run test && npm run build",
-        "deploy": "gh-pages -d dist",
-        "lint": "eslint src --ext .js",
-        "lint:fix": "eslint src --ext .js --fix"
-    },
-    "keywords": [
-        "game",
-        "phaser",
-        "battle",
-        "turn-based",
-        "strategy",
-        "javascript"
-    ],
-    "author": "Your Name",
-    "license": "MIT",
-    "dependencies": {
-        "phaser": "^3.90.0"
-    },
-    "devDependencies": {
-        "vite": "^7.0.6",
-        "jest": "^30.0.5",
-        "jest-environment-jsdom": "^30.0.5",
-        "@playwright/test": "^1.54.1",
-        "gh-pages": "^6.1.1",
-        "eslint": "^9.32.0",
-        "@eslint/js": "^9.32.0",
-        "globals": "^15.12.0"
-    },
-    "overrides": {
-        "glob": "^10.4.5",
-        "rimraf": "^5.0.10"
-    },
-    "engines": {
-        "node": ">=20.19.0",
-        "npm": ">=10.0.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/keiv-fly/202507_LnH_Battle.git"
-    },
-    "bugs": {
-        "url": "https://github.com/keiv-fly/202507_LnH_Battle/issues"
-    },
-    "homepage": "https://github.com/keiv-fly/202507_LnH_Battle"
+  "name": "lnh-battle",
+  "version": "0.0.1",
+  "description": "A turn-based battle arena game built with Phaser 3, featuring tactical grid-based combat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keiv-fly/202507_LnH_Battle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keiv-fly/202507_LnH_Battle/issues"
+  },
+  "homepage": "https://github.com/keiv-fly/202507_LnH_Battle#readme",
+  "devDependencies": {
+    "phaser": "^3.90.0",
+    "vite": "^7.0.6"
+  }
 }
