@@ -79,7 +79,6 @@ A focused, turn-based battle arena game built with Phaser 3, featuring tactical 
 /tests
   /core                   # Core logic tests
     battle.test.js
-    combat.test.js
     turnManager.test.js
     ai.test.js
   /ui                     # Integration tests
